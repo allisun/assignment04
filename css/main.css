@@ -1,0 +1,52 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+/*code from css-tricks, universal box sizing that includes pseudo elements*/
+/*https://css-tricks.com/box-sizing*/
+
+body{
+	margin:0 auto; /*to make every div centered*/
+	padding:15px; /*to give things a 15px space so they're better laid out*/
+	text-align:center; /*all text will be centered*/
+	font-family: Helvetica, arial, sans-serif;
+	font-size:100%;
+}
+
+#banner{
+	top:0; /*so it stays fixed on the top*/
+	position:fixed;
+	height:250px; /*the height where the main content div will start*/
+	width:100%;
+	z-index:1000; /*to stay in front*/
+	background-color: #000;
+	color:#fff;
+	font-family: "Courier New", Courier, monospace;
+}
+
+
+#nav_bar ul li{
+	display:block; /*makes the nav bar horizontal*/
+	text-decoration: none; /*no bullets*/
+	font-style:italic;
+}
+
+#nav_bar ul li a{
+	color:#F90404; /*red link text on black bg so it's always readable*/
+}
+
+#info{
+	margin-top:250px; /*depends on the height of the banner*/
+	width: 960px;
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    /*column count code from w3schools, cross-browser*/
+	/*http://www.w3schools.com/css/css3_multiple_columns.asp*/
+	background-color: #fff;
+	color:#000;
+}
+
+#info img{
+	width:450px;
+	margin:0 auto;
+}
